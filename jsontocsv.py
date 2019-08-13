@@ -23,4 +23,5 @@ with open("writetocsv.csv","r",newline = "") as x:
                 item[key] = int(val)
             except ValueError:
                 item[key] = val
-print(arr)
+with open("writetojson.json","w") as x :
+    x.write(str(arr).replace("'",'"')
