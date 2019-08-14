@@ -1,6 +1,14 @@
 import pymongo
 import mysql.connector
 
+dbku = mysql.connector.connect(
+    host =  '127.0.0.1',
+    port = 3306,
+    user = 'kinanweda',
+    passwd = '12345',
+    database = 'doraemon' 
+)
+
 x = pymongo.MongoClient('mongodb://localhost:27017')
 database = input('Masukkan nama Database : ')
 db = x[database]
