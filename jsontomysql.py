@@ -1,6 +1,14 @@
 import json
 import mysql.connector
 
+dbku = mysql.connector.connect(
+    host =  '127.0.0.1',
+    port = 3306,
+    user = 'kinanweda',
+    passwd = '12345',
+    database = 'doraemon' 
+)
+
 with open("sqltojson.json") as x:
     data = json.load(x)
 
